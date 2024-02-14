@@ -1,8 +1,13 @@
-function KeyboardKeyUpEvent(event) {
+function handleKeyboardKeyUpEvent(event) {
     const playerPressed = event.key;
+    console.log( 'player pressed', playerPressed)
 
-    if (playerPressed === 'Escape') {
+    if(playerPressed === 'Escape'){
         gameOver();
+    }
+
+    if(playerPressed === 'Enter'){
+        play();
     }
 
     const currentAlphabetElement = document.getElementById('current-alphabet');
@@ -22,21 +27,22 @@ function KeyboardKeyUpEvent(event) {
         continueGame();
     }
     else {
+        console.log('dhurrr vaiya va apu...right key press koro');
+
         const currentLife = getTextElementValue('current-life');
         const updatedLife = currentLife - 1;
         setTextElementValue('current-life', updatedLife);
 
-        if (updatedLife === 0) {
+        if(updatedLife === 0){
             gameOver();
         }
     }
 }
 
-document.addEventListener('keyup', KeyboardKeyUpEvent);
+document.addEventListener('keyup', handleKeyboardKeyUpEvent);
 
 function continueGame() {
     const alphabet = getRandomAlphabet();
-
     const currentAlphabetElement = document.getElementById('current-alphabet');
     currentAlphabetElement.innerText = alphabet;
 
@@ -52,6 +58,12 @@ function play() {
     setTextElementValue('current-score', 0);
 
     continueGame();
+}
+
+function backHome() {
+    hideElement('final-score');
+    hideElement('play-ground');
+    showElement('home-screen');
 }
 
 function gameOver() {

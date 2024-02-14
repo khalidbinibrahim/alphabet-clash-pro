@@ -1,47 +1,47 @@
-function hideElement(elementId) {
-    const element = document.getElementById(elementId);
-    element.classList.add('hidden');
+function hideElement(hide) {
+    const hideElement = document.getElementById(hide);
+    hideElement.classList.add('hidden');
 }
 
-function showElement(elementId) {
-    const element = document.getElementById(elementId);
-    element.classList.remove('hidden');
+function showElement(show) {
+    const showElement = document.getElementById(show);
+    showElement.classList.remove('hidden');
 }
 
-function setBackgroundColor(backgroundId) {
-    const setBackground = document.getElementById(backgroundId);
-    setBackground.classList.add('bg-orange-500');
+function setBackgroundColor(setBackground){
+    const setBackgroundColor = document.getElementById(setBackground);
+    setBackgroundColor.classList.add('bg-orange-500');
 }
 
-function removeBackgroundColor(backgroundId) {
-    const removeBackground = document.getElementById(backgroundId);
-    removeBackground.classList.remove('bg-orange-500');
+function removeBackgroundColor(removeBackground){
+    const removeBackgroundColor = document.getElementById(removeBackground);
+    removeBackgroundColor.classList.remove('bg-orange-500');
 }
 
 
-function getTextElementValue(textId) {
-    const getText = document.getElementById(textId);
-    const textValue = getText.innerText;
-    const value = parseInt(textValue);
+function getTextElementValue(getValue){
+    const getTextElementValue = document.getElementById(getValue);
+    const elementValueText = getTextElementValue.innerText;
+    const value = parseInt(elementValueText);
     return value;
 }
 
-function setTextElementValue(textId, value) {
-    const setText = document.getElementById(textId);
-    setText.innerText = value;
+function setTextElementValue(setValue, value){
+    const setTextElementValue = document.getElementById(setValue);
+    setTextElementValue.innerText = value;
 }
 
-function getElementText(getText) {
-    const getText = document.getElementById(getText);
-    const text = getText.innerText;
+function getElementText(getElement){
+    const getElementText = document.getElementById(getElement);
+    const text = getElementText.innerText;
     return text;
 }
 
-function getRandomAlphabet() {
+function getRandomAlphabet(){
     const alphabetString = 'abcdefghijklmnopqrstuvwxyz';
     const alphabets = alphabetString.split('');
 
-    const randomNumber = Math.random() * 25;
+    const randomNumber = Math.random()*25;
     const index = Math.round(randomNumber);
 
     const alphabet = alphabets[index];

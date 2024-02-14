@@ -17,9 +17,9 @@
     <main class="min-h-screen bg-[#010313] bg-[url(images/background.png)] bg-no-repeat bg-center">
         <!-- HOME -->
         <section id="home-screen" class="min-h-screen text-white flex justify-center items-center">
-            <div class="flex flex-col items-center gap-4">
-                <h1 class="text-[160px] font-anton uppercase">Alphabet Clash</h1>
-                <p>Unleash Your Keyboard Kun g Fu : Press “Enter” to Play</p>
+            <div class="flex flex-col items-center gap-6">
+                <h1 class="text-6xl lg:text-[160px] font-anton uppercase">Alphabet Clash</h1>
+                <p class="text-center">Unleash Your Keyboard Kun g Fu : Press “Enter” to Play</p>
                 <button onclick="play()" class="btn bg-white text-black">Play Now</button>
             </div>
         </section>
@@ -28,7 +28,7 @@
             <div class="flex flex-col items-center gap-20 pt-20">
                 <!-- SCREEN -->
                 <div
-                    class="artboard artboard-horizontal phone-6 border-[20px] rounded-2xl border-[#010313CC] bg-[#FFFFFFB3]">
+                    class="artboard artboard-horizontal sm:w-3/5 phone-6 border-[20px] rounded-2xl border-[#010313CC] bg-[#FFFFFFB3]">
                     <div class="flex justify-center">
                         <p class="bg-[#2F2941] px-6 pb-4 rounded-b-xl text-white">Don't watch keyboard while playing...
                         </p>
@@ -77,12 +77,12 @@
                 <div class="flex justify-between w-3/4">
                     <button class="btn rounded-3xl bg-[#894189] hover:bg-white text-white hover:text-[#894189] px-4">
                         Life
-                        <img src="images/heart.svg" alt="">
+                        <img src="images/heart.svg" alt="heart">
                         <span id="current-life">5</span>
                     </button>
                     <button class="btn rounded-3xl bg-[#360490] hover:bg-white text-white hover:text-[#360490] px-4">
                         Score
-                        <img src="images/dollar.svg" alt="">
+                        <img src="images/dollar.svg" alt="dollar">
                         <span id="current-score">0</span>
                     </button>
 
@@ -97,7 +97,8 @@
                     <span class="font-bold">Score:</span>
                     <span id="last-score">0</span>
                 </h1>
-                <button onclick="play()" class="btn">Play Again</button>
+                <button onclick="backHome()" class="btn mx-2">Home</button>
+                <button onclick="play()" class="btn mx-2">Play Again</button>
                 <p>Practice makes a man perfect</p>
             </div>
         </section>
