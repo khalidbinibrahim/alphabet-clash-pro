@@ -15,7 +15,6 @@ function handleKeyboardKeyUpEvent(event) {
     const expectedAlphabet = currentAlphabet.toLowerCase();
 
     if (playerPressed === expectedAlphabet) {
-        console.log('you got a point!');
 
         const currentScore = getTextElementValue('current-score');
         const updatedScore = currentScore + 1;
@@ -27,8 +26,6 @@ function handleKeyboardKeyUpEvent(event) {
         continueGame();
     }
     else {
-        console.log('dhurrr vaiya va apu...right key press koro');
-
         const currentLife = getTextElementValue('current-life');
         const updatedLife = currentLife - 1;
         setTextElementValue('current-life', updatedLife);
