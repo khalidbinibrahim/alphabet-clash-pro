@@ -51,7 +51,7 @@ function play() {
     hideElement('final-score');
     showElement('play-ground');
 
-    setTextElementValue('current-life', 5);
+    setTextElementValue('current-life', 3);
     setTextElementValue('current-score', 0);
 
     continueGame();
